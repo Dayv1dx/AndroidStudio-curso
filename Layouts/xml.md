@@ -6,6 +6,6 @@ XML (e**X**tensible **M**arkup **L**anguage)
 ~~~~ html
 - <receita nome="pão"> (abertura da tag)
 - <ingredientes quantidade="3" unidade="xícara" item="farinha"/> (conteúdo da tag)
-- </receita>(fechamento da tag)
+- </receita> (fechamento da tag)
 
 ~~~~
