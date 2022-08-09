@@ -1,0 +1,1 @@
+São componentes que podem capturar o que foi digitado pelo usuário, dentre várias outras coisas.
