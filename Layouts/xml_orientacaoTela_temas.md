@@ -35,5 +35,7 @@ Para fazer a alteração da orientação, é necessário:
 `wrap_content` : Se adapta de acordo com o tamanho do conteúdo.
 `match_constraint` : O componente ocupa todo o espaço disponível.
 
+ctrl + Alt + l = organiza o código
+
 
  
