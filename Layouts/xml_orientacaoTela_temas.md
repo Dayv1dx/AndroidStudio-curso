@@ -33,9 +33,26 @@ Para fazer a alteração da orientação, é necessário:
 É uma maneira de criar layouts que se adptam muitos bem a uma diversidade de dispositivos.
 
 `wrap_content` : Se adapta de acordo com o tamanho do conteúdo.
+
 `match_constraint` : O componente ocupa todo o espaço disponível.
 
 ctrl + Alt + l = organiza o código
 
+## Chains
 
+São "correntes" usadas para alinhar vários objetos de uma só vez. Existem três modos:
+
+1. Spread (Espalhar)
+2. Spread inside (Espalhar para dentro)
+3. Packed (Empacotar) 
+
+Para mudar:
+
+ direito do mouse > `Cycle Chain Mode`
+
+ ### Truques de alinhamento
+
+ direito do mouse > `Organize`
+
+ Padding: configura uma distância dentro do componente
  

@@ -4,7 +4,7 @@
 ~~~ java
 public void abrirDialog (){
     // instanciando a AlertDialog
-        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        AlertDialog.Builder sairDialog = new AlertDialog.Builder(this);
 
     // configurando o título e a mensagem
         dialog.setTitle("Confirmação");
@@ -16,22 +16,23 @@ public void abrirDialog (){
 
     // configurando ações para o "sim" e o "não"
 
-        dialog.setPositiveButton("Não", new DialogInterface.OnClickListener() {
+        dialog.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 // ação a ser executada
             }
         });
 
-        dialog.setNegativeButton("Sim", new DialogInterface.OnClickListener() {
+        dialog.setNegativeButton("Não", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 // ação a ser executada
+                dialog.dismiss();
             }
         });
 
         // criando e exibindo a AlertDialog
         
-        dialog.create();
+        AlertDialog dialog = sairDialog.create();
         dialog.show();
     }
