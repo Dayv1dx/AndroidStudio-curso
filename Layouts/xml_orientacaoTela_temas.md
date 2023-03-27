@@ -4,7 +4,7 @@ XML (e**X**tensible **M**arkup **L**anguage)
 
 É uma linguagem de marcação utilizada para criar componentes de interfaces, onfe basicamente se trabalha com tags `<tag/>`.
 
-~~~~ html
+~~~~ xml
 - <receita nome="pão"> (abertura da tag)
 - <ingredientes quantidade="3" unidade="xícara" item="farinha"/> (conteúdo da tag)
 - </receita> (fechamento da tag)
@@ -28,31 +28,4 @@ Para fazer a alteração da orientação, é necessário:
 
 ![alt](https://aboutreact.com/wp-content/uploads/2018/08/landscap_example4.png "exemplo")
 
-## Constraint Layout
 
-É uma maneira de criar layouts que se adptam muitos bem a uma diversidade de dispositivos.
-
-`wrap_content` : Se adapta de acordo com o tamanho do conteúdo.
-
-`match_constraint` : O componente ocupa todo o espaço disponível.
-
-ctrl + Alt + l = organiza o código
-
-## Chains
-
-São "correntes" usadas para alinhar vários objetos de uma só vez. Existem três modos:
-
-1. Spread (Espalhar)
-2. Spread inside (Espalhar para dentro)
-3. Packed (Empacotar) 
-
-Para mudar:
-
- direito do mouse > `Cycle Chain Mode`
-
- ### Truques de alinhamento
-
- direito do mouse > `Organize`
-
- Padding: configura uma distância dentro do componente
- 
