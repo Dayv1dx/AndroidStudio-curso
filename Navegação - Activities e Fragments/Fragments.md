@@ -15,51 +15,57 @@ O comando acima deve ser feito dentro do método **OnCreate**
 
 ## Criando um fragment
 
+- **1ª Forma:**
+
+~~~
 New > Fragment > Fragment (Blank)
-
-O atributo **gravity** permite fazer alinhamentos no TextView
-
-É necessário adicionar um `FrameLayout`, pois ele é um conteiner onde os Fragments serão carregados.
-
-MainActivity
-
-~~~ java
-public class FragmentExemplo extends Fragment {
-
-    private FragmentExemplo fragmentExemplo; // definindo o objeto
-
-onCreate(){
-
-   fragmentExemplo = new FragmentExemplo(); // instanciando
-
-   // Configurar objeto para o fragmento
-   FragmentTransaction transaction = getSupportFragementManager().beginTransaction;
-   transaction.add.(R.id.frameLayout, fragment exemplo);
-
-   // o método "add" adiciona e o método "replace" muda/substitui
-   transaction.commit(); // o "commit" finaliza as transações.
-}
-} 
- ~~~~ 
-
-Fragment
-
-~~~ java
-
-public class FragmentExemplo extends Fragment {
-
-    private TextView texto;
-
-onCreate(){
-
-    View view = inflater.inflater(R.layout.fragment_exemplo, conteiner,)
-
-
-    // No Fragment tem que usar o "view"
-    texto = view.findViewId.(R.id.texto);
-
-    return view;
-}
-} 
 ~~~
 
+É necessário adicionar um `FragmentContainer`, pois ele é um conteiner onde os Fragments serão carregados.
+
+- **2ª Forma:**
+
+1. Criar uma Classe
+
+~~~
+New > Kotlin/Class File > `ExemploFragment.kt`
+~~~
+
+2. Estabelecer relação de herança com `Fragment()`
+3. Criar um arquivo XML para associar ao fragment
+
+~~~ kotlin
+class ExemploFragment : Fragment() { // 2
+
+    // método que vai construir a visualização
+    override fun onCreateView( 
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_exemplo, container, false) // 3
+    }
+}
+~~~
+
+<br>
+
+## Navegando pelos Fragments
+
+~~~ kotlin
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // objeto que permite manipular os fragments
+        val fragmentManager = supportFragmentManager.beginTransaction()
+        
+        // adiciona o fragment
+        fragmentManager.add( R.id.fragment_container, ExemploFragment() ).commit()
+
+        // o método "replace" é o recomendado na navegação
+        fragmentManager.replace( R.id.fragment_container, ExemploFragment() ).commit()
+    }
+}
