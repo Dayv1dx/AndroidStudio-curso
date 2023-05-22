@@ -1,7 +1,8 @@
 # ListView
 
-~~~ java 
+O `ListView` é um item depreciado, o recomendado é o RecyclerView. Em Java:
 
+~~~ java 
     private ListView lista;
     private String[] itens = {"OS Exemplo 1","OS Exemplo 2","OS Exemplo 3","OS Exemplo 4","OS Exemplo 5"}
 
